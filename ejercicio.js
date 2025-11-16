@@ -22,6 +22,7 @@ let articulos = [
 ];
 
 // apartado 1
+// filtrar el array y devolver solo los que coinciden
 function filtrartipoyprecio(articulos, tipo, precioMax) {
     return articulos.filter(a => a.tipo === tipo && a.precio <= precioMax);
 }
@@ -30,6 +31,7 @@ console.log("electronica y precio <= 75");
 console.log(filtrartipoyprecio(articulos, "Electrónica", 75));
 
 // apartado 2
+// recorrer articulos y modificar su descripcion
 function descescripciones(articulos) {
     return articulos.map(a => {
         a.descripcion = a.descripcion.charAt(0).toUpperCase() + a.descripcion.slice(1).toLowerCase();
@@ -42,7 +44,10 @@ console.log(descescripciones(articulos));
 
 // apartado 3
 function buscarcadena(articulos, cadena) {
+    // convierte la cadena de busqueda a minusculas
     cadena = cadena.toLowerCase();
+
+    // filtra articulos en que su descripcion incluya la cadena
     return articulos.filter(a => a.descripcion.toLowerCase().includes(cadena));
 }
 
@@ -51,9 +56,13 @@ console.log(buscarcadena(articulos, "led"));
 
 // apartado 4
 function cantidadtipo(articulos, tipo) {
+    //filtra articulos por tipo
     const filtrados = articulos.filter(a => a.tipo === tipo);
 
+    // cantidad de articulos
     const cantidad = filtrados.length;
+
+    // calcula el precio medio
     const preciomedio = cantidad > 0 
         ? (filtrados.reduce((sum, a) => sum += a.precio, 0) / cantidad).toFixed(2)
         : 0;
@@ -65,6 +74,7 @@ console.log("cantidad electronica");
 console.log(cantidadtipo(articulos, "Electrónica"));
 
 // apartado 5
+// ordena articulos por precio
 function ordenarprecios(articulos, orden = "asc") {
     return articulos.sort((a, b) => orden === "asc" ? a.precio - b.precio : b.precio - a.precio);
 }

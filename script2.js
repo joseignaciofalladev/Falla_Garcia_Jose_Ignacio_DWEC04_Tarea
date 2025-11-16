@@ -6,11 +6,14 @@ class Banco {
 
     // creacion de la cuenta
     crearcuenta(codigo, saldo = 0) {
+
+        // error por si la cuenta existe
         if (this.cuentas[codigo]) {
             console.error(`la cuenta ${codigo} ya existe`);
             return;
         }
 
+        // error por si se da un codigo distinto
         if (codigo < 1 || codigo > 599999) {
             console.error("el codigo debe estar entre 000001 y 599999");
             return;
@@ -21,6 +24,8 @@ class Banco {
 
     // actualizacion de cuenta
     actualizarcuenta(codigo, cantidad) {
+
+        // error por si la cuenta no existe
         if (!this.cuentas[codigo]) {
             console.error(`la cuenta ${codigo} no existe`);
             return;
@@ -35,8 +40,9 @@ class Banco {
             return;
         }
 
+        // error por si todavia hay saldo
         if (this.cuentas[codigo] !== 0) {
-            console.error(`la cuenta ${codigo} no puede eliminarse porque el saldo es distinto de 0`);
+            console.error(`la cuenta ${codigo} no se puede eliminarse ya que el saldo no es 0`);
             return;
         }
 
@@ -45,9 +51,11 @@ class Banco {
 
     // listado de cuentas
     listarcuentas() {
+        // para mostrar el texto como se ve en la imagen
         document.write(`<h1>${this.nombre}</h1>`);
         document.write("<hr>");
 
+        // esto recorre todas las cuentas del banco y las muestra
         for (let codigo in this.cuentas) {
             document.write(`<p><strong>${codigo}</strong> - ${this.cuentas[codigo]} €</p>`);
         }
