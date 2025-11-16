@@ -1,25 +1,25 @@
-let articulos = [ 
-    { "codigo": 1, "descripcion": "mouse Inalámbrico", "precio": 25.99, "tipo": "Periféricos" },
-    { "codigo": 2, "descripcion": "teclado Mecánico", "precio": 49.99, "tipo": "Periféricos" },
-    { "codigo": 3, "descripcion": "Monitor 24 pulgadas", "precio": 179.99, "tipo": "Electrónica" },
-    { "codigo": 4, "descripcion": "Disco duro externo 1TB", "precio": 89.99, "tipo": "Electrónica" },
-    { "codigo": 5, "descripcion": "Auriculares con micrófono", "precio": 34.99, "tipo": "Periféricos" },
+let articulos = [
+    { "codigo": 1, "descripcion": "mouse InalÃ¡mbrico", "precio": 25.99, "tipo": "PerifÃ©ricos" },
+    { "codigo": 2, "descripcion": "teclado MecÃ¡nico", "precio": 49.99, "tipo": "PerifÃ©ricos" },
+    { "codigo": 3, "descripcion": "Monitor 24 pulgadas", "precio": 179.99, "tipo": "ElectrÃ³nica" },
+    { "codigo": 4, "descripcion": "Disco duro externo 1TB", "precio": 89.99, "tipo": "ElectrÃ³nica" },
+    { "codigo": 5, "descripcion": "Auriculares con micrÃ³fono", "precio": 34.99, "tipo": "PerifÃ©ricos" },
     { "codigo": 6, "descripcion": "Cable HDMI 2m", "precio": 12.99, "tipo": "Accesorios" },
     { "codigo": 7, "descripcion": "Cargador USB-C", "precio": 19.99, "tipo": "Accesorios" },
-    { "codigo": 8, "descripcion": "lámpara LED de escritorio", "precio": 29.99, "tipo": "Mobiliario" },
-    { "codigo": 9, "descripcion": "Silla ergonómica", "precio": 199.99, "tipo": "Mobiliario" },
-    { "codigo": 10, "descripcion": "webcam Full HD", "precio": 69.99, "tipo": "Electrónica" },
+    { "codigo": 8, "descripcion": "lÃ¡mpara LED de escritorio", "precio": 29.99, "tipo": "Mobiliario" },
+    { "codigo": 9, "descripcion": "Silla ergonÃ³mica", "precio": 199.99, "tipo": "Mobiliario" },
+    { "codigo": 10, "descripcion": "webcam Full HD", "precio": 69.99, "tipo": "ElectrÃ³nica" },
     { "codigo": 11, "descripcion": "Tarjeta de memoria 128GB", "precio": 24.99, "tipo": "Accesorios" },
     { "codigo": 12, "descripcion": "Base para laptop ajustable", "precio": 39.99, "tipo": "Mobiliario" },
-    { "codigo": 13, "descripcion": "Router WiFi 6", "precio": 129.99, "tipo": "Electrónica" },
-    { "codigo": 14, "descripcion": "Impresora multifuncional", "precio": 249.99, "tipo": "Electrónica" },
-    { "codigo": 15, "descripcion": "smartwatch deportivo", "precio": 59.99, "tipo": "Electrónica" },
-    { "codigo": 16, "descripcion": "Cámara de seguridad inalámbrica", "precio": 99.99, "tipo": "Electrónica" },
-    { "codigo": 17, "descripcion": "Micrófono de condensador", "precio": 74.99, "tipo": "Periféricos" },
-    { "codigo": 18, "descripcion": "Controlador MIDI", "precio": 119.99, "tipo": "Periféricos" },
-    { "codigo": 19, "descripcion": "altavoz Bluetooth Portátil", "precio": 45.99, "tipo": "Electrónica" },
+    { "codigo": 13, "descripcion": "Router WiFi 6", "precio": 129.99, "tipo": "ElectrÃ³nica" },
+    { "codigo": 14, "descripcion": "Impresora multifuncional", "precio": 249.99, "tipo": "ElectrÃ³nica" },
+    { "codigo": 15, "descripcion": "smartwatch deportivo", "precio": 59.99, "tipo": "ElectrÃ³nica" },
+    { "codigo": 16, "descripcion": "CÃ¡mara de seguridad inalÃ¡mbrica", "precio": 99.99, "tipo": "ElectrÃ³nica" },
+    { "codigo": 17, "descripcion": "MicrÃ³fono de condensador", "precio": 74.99, "tipo": "PerifÃ©ricos" },
+    { "codigo": 18, "descripcion": "Controlador MIDI", "precio": 119.99, "tipo": "PerifÃ©ricos" },
+    { "codigo": 19, "descripcion": "altavoz Bluetooth PortÃ¡til", "precio": 45.99, "tipo": "ElectrÃ³nica" },
     { "codigo": 20, "descripcion": "Kit de herramientas para PC", "precio": 18.99, "tipo": "Accesorios" }
-];
+]
 
 // apartado 1
 // filtrar el array y devolver solo los que coinciden
@@ -83,4 +83,5 @@ console.log("orden ascendente");
 console.log(ordenarprecios([...articulos], "asc"));
 
 console.log("orden descendente");
+
 console.log(ordenarprecios([...articulos], "desc"));
